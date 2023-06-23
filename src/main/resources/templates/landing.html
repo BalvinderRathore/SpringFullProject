@@ -3,38 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <title>Landing Page</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        div {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 5px;
+            width: 300px;
+            margin: 20px auto;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h3 {
+            margin-top: 0;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+
+
 </head>
 <body>
-
 
 
 <div>
     <form action="login" method="post">
         <h3>LOGIN</h3>
 
-        <label for="usernameSignin">USERNAME</label>
-        <input type="text" id="usernameSignin" name="username"><br>
-
-        <label for="passwordSignup">PASSWORD</label>
-        <input type="password" id="passwordSignin" name="password"> <br><br>
-
-        <input type="submit" value="SIGNIN">
-
+        <label for="usernameLogin">USERNAME:</label>
+        <input type="text" id="usernameLogin" name="username" required><br>
+        <label for="passwordLogin">PASSWORD:</label>
+        <input type="password" id="passwordLogin" name="password" required><br><br>
+        <input type="submit" value="LOGIN">
     </form>
 </div>
-
 <div>
     <form action="signup" method="post">
         <h3>SIGNUP</h3>
 
-        <label for="usernameSignup">USERNAME</label>
-        <input type="text" id="usernameSignup" name="username"><br>
-
-        <label for="passwordSignup">PASSWORD</label>
-        <input type="password" id="passwordSignup" name="password"> <br><br>
-
+        <label for="usernameSignup">USERNAME:</label>
+        <input type="text" id="usernameSignup" name="username" required><br>
+        <label for="passwordSignup">PASSWORD:</label>
+        <input type="password" id="passwordSignup" name="password" required><br><br>
         <input type="submit" value="SIGNUP">
-
     </form>
 </div>
 
