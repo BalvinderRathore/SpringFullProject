@@ -4,12 +4,11 @@ import org.apache.coyote.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 
 @RestController
+@RequestMapping("/api/1.1")
 public class MainRestController {
 
 
@@ -24,6 +23,19 @@ public class MainRestController {
         }else {
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);
         }
+    }
+
+
+    @CrossOrigin("http://localhost:4200/")
+    @GetMapping("dummy")
+    public Userdetail dummydetail(){
+        Userdetail userdetail=new Userdetail();
+        userdetail.setUsername("JAs");
+        userdetail.setEmail("jas@123");
+        userdetail.setFname("JAS");
+        userdetail.setLname("Singh");
+        userdetail.setPhone("9971");
+        return userdetail;
     }
 
 
